@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>standoff2wallpapers.com.ua</title>
+    <style>
+        body {
+            background-color: #ff99ff;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Мигающий заголовок */
+        @keyframes blink {
+            0%, 50%, 100% { color: #ff0000; }
+            25% { color: #00ff00; }
+            75% { color: #0000ff; }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 70px;
+            text-shadow: 3px 3px #00ffff;
+            animation: blink 1s infinite;
+        }
+
+        /* Водяная надпись Wix */
+        .wix-watermark {
+            position: absolute;
+            font-size: 60px;
+            color: rgba(0,0,0,0.2);
+            transform: rotate(-45deg);
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        /* Галерея */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin: 50px;
+            border: 5px dotted #ff00ff;
+            padding: 20px;
+            background-color: #ffff99;
+        }
+
+        @keyframes borderBlink {
+            0% { border-color: #ff0000; }
+            25% { border-color: #00ff00; }
+            50% { border-color: #0000ff; }
+            75% { border-color: #ff00ff; }
+            100% { border-color: #ff0000; }
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            border: 5px solid #0000ff;
+            padding: 10px;
+            box-shadow: 10px 10px 0px #ff00ff;
+            object-fit: cover;
+            animation: borderBlink 2s infinite;
+            transition: transform 0.5s;
+        }
+
+        .gallery img:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        /* Форма */
+        .form-container {
+            background-color: #00ffff;
+            padding: 50px;
+            margin: 50px;
+            border: 7px double #ff0000;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 4px inset #ff00ff;
+            margin-top: 5px;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 18px;
+        }
+
+        @keyframes buttonBlink {
+            0%, 100% { background-color: #ff6600; color: #ffffff; }
+            50% { background-color: #00ff00; color: #000; }
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 20px;
+            border: 3px groove #0000ff;
+            cursor: pointer;
+            animation: buttonBlink 1.5s infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Водяная надпись Wix -->
+    <div class="wix-watermark" style="top: 100px; left: 50px;">WIX.COM</div>
+    <div class="wix-watermark" style="top: 400px; left: 400px;">WIX.COM</div>
+    <div class="wix-watermark" style="top: 800px; left: 200px;">WIX.COM</div>
+
+    <h1>Standoff 2 Wallpapers</h1>
+
+    <div class="gallery">
+        <!-- Добавляй свои обои сюда -->
+        <img src="images/wallpaper1.jpg" alt="Wallpaper 1">
+        <img src="images/wallpaper2.jpg" alt="Wallpaper 2">
+        <img src="images/wallpaper3.jpg" alt="Wallpaper 3">
+    </div>
+
+    <div class="form-container">
+        <h2>Предложения по обоям</h2>
+        <!-- Formspree форма -->
+        <form action="https://formspree.io/f/meondzke" method="POST">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Отправить</button>
+        </form>
+        <p style="color:red;">Никаких файлов загружать нельзя.</p>
+    </div>
+</body>
+</html>
